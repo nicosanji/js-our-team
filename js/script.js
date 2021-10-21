@@ -9,9 +9,10 @@ fornito, il nostro javascript in cui:
  3) Utilizziamo poi gli input presenti nella pagina per permettere 
     all’utente di aggiungere nuovi membri del team.
 */
+
 "use strict";
 
-// Array fornito per esercizio
+// ARRAY FORNITO PER ESERCIZIO
 let ourTeam = [
     // 1 (0)
     {
@@ -51,18 +52,31 @@ let ourTeam = [
     },
 ]
 
-// Esperimenti in console
-//  Console -> tutto l'array
-console.log(ourTeam);
 
-console.log(ourTeam[0]); //(1)
-console.log(ourTeam[1]); //(2)
-console.log(ourTeam[2]); //(3)
-console.log(ourTeam[3]); //(4)
-console.log(ourTeam[4]); //(5)
-console.log(ourTeam[5]); //(6)
-
+// ESPERIMENTI IN CONSOLE
+console.log(ourTeam[0]); // (1)
+console.log(ourTeam[1]); // (2)
+console.log(ourTeam[2]); // (3)
+console.log(ourTeam[3]); // (4)
+console.log(ourTeam[4]); // (5)
+console.log(ourTeam[5]); // (6)
 console.log(`Il "name" del 1° (0) elemento è ${(ourTeam[0].name)}.`)
 console.log(`L'"image" del 3° (2) elemento è ${(ourTeam[2].image)}.`)
 console.log(`Il "role" del 6° (5) elemento è ${(ourTeam[5].role)}.`)
+
+// ELEMENTI DEL DOM DA INDIVIDUARE
+// Individuo elemento html -> class .team-container
+const teamContainer = document.querySelector(".team-container");
+// Individuo elemento html -> id #name
+const formName = document.getElementById("name");
+// Individuo elemento html -> id #role
+const formRole = document.getElementById("role");
+// Individuo elemento html -> id #image
+const formImage = document.getElementById("image");
+// Individuo elemento html -> id #addMemberButton
+const addMemberButton = document.getElementById("addMemberButton");
+
+
+
+
 
