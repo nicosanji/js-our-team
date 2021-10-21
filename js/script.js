@@ -10,6 +10,7 @@ fornito, il nostro javascript in cui:
     all’utente di aggiungere nuovi membri del team.
 */
 
+// Evito errori nella dichiarazione delle variabili (hoisting)
 "use strict";
 
 // ARRAY FORNITO PER ESERCIZIO
@@ -49,20 +50,21 @@ let ourTeam = [
         name: "Barbara Ramos",
         role: "Graphic Designer",
         image: "img/barbara-ramos-graphic-designer.jpg"
-    },
-]
+    }
+];
 
 
 // ESPERIMENTI IN CONSOLE
-console.log(ourTeam[0]); // (1)
-console.log(ourTeam[1]); // (2)
-console.log(ourTeam[2]); // (3)
-console.log(ourTeam[3]); // (4)
-console.log(ourTeam[4]); // (5)
-console.log(ourTeam[5]); // (6)
-console.log(`Il "name" del 1° (0) elemento è ${(ourTeam[0].name)}.`)
-console.log(`L'"image" del 3° (2) elemento è ${(ourTeam[2].image)}.`)
-console.log(`Il "role" del 6° (5) elemento è ${(ourTeam[5].role)}.`)
+// console.log(ourTeam[0]); // (1)
+// console.log(ourTeam[1]); // (2)
+// console.log(ourTeam[2]); // (3)
+// console.log(ourTeam[3]); // (4)
+// console.log(ourTeam[4]); // (5)
+// console.log(ourTeam[5]); // (6)
+// console.log(`Il "name" del 1° (0) elemento è ${(ourTeam[0].name)}.`)
+// console.log(`L'"image" del 3° (2) elemento è ${(ourTeam[2].image)}.`)
+// console.log(`Il "role" del 6° (5) elemento è ${(ourTeam[5].role)}.`)
+
 
 // ELEMENTI DEL DOM DA INDIVIDUARE
 // Individuo elemento html -> class .team-container
@@ -77,6 +79,10 @@ const formImage = document.getElementById("image");
 const addMemberButton = document.getElementById("addMemberButton");
 
 
-
-
+// BONUS
+// Click -> inserisci quello che l'utente ha scritto nel form grazie alla funzione
+addMemberButton.addEventListener("click", function () {
+    // Richiamo la funzione e aggiungi nuovo membro
+    formSubmit();
+});
 
